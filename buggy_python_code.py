@@ -42,8 +42,10 @@ def load_yaml(filename):
     
 def authenticate(password):
     # Assert that the password is correct
-    assert password == "Iloveyou", "Invalid password!"
-    print("Successfully authenticated!")
+    if password != "Iloveyou":
+        print("Invalid password!")
+    else:
+        print("Successfully authenticated!")
 
 if __name__ == '__main__':
     print("Vulnerabilities:")
